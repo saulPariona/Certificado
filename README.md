@@ -1,6 +1,6 @@
 # Certificado de la Universidad Nacional del Centro del Perú
 
-Copyrigth 2025 © Facultad de Ingeniería de Sistemas - Universidad Nacional del Centro del Perú
+Copyrigth 2026 © Facultad de Ingeniería de Sistemas - Universidad Nacional del Centro del Perú-Pariona Ramos Saul Anibal
 
 ## Iniciar el proyecto
 
