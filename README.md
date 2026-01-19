@@ -34,6 +34,11 @@ iniciar el servidor
 ```bash
 composer run dev
 ```
+iniciar el servidor adicional sin vite
+
+```bash
+composer run dev
+```
 Habilitar vinculacion de archivos
 
 ```bash
