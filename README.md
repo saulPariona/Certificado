@@ -37,7 +37,7 @@ composer run dev
 iniciar el servidor adicional sin vite
 
 ```bash
-composer run dev
+php artisan serve
 ```
 Habilitar vinculacion de archivos
 
