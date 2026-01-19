@@ -1,3 +1,44 @@
+# Certificado de la Universidad Nacional del Centro del Perú
+
+Copyrigth 2025 © Facultad de Ingeniería de Sistemas - Universidad Nacional del Centro del Perú
+
+## Iniciar el proyecto
+
+Instalar dependencias
+
+```bash
+composer install
+npm i
+```
+
+Generar archivo .env
+
+```bash
+cp .env.example .env
+```
+
+generar clave de encriptación
+
+```bash
+php artisan key:generate
+```
+
+migrar la base de datos
+
+```bash
+php artisan migrate --seed
+```
+
+iniciar el servidor
+
+```bash
+composer run dev
+```
+Habilitar vinculacion de archivos
+
+```bash
+php artisan storage:link
+```
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
