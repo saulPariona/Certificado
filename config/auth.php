@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [ // este api sirve para que cuando se autentifique el usuario le pida las solicitus entrantes de la api
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
     ],
 
     /*
