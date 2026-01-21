@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categoria', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('Nombre_Categoria');
+        Schema::create('tipos', function (Blueprint $table) {
+            $table->unsignedTinyInteger('id')->primary(); // es autoincremental y es primary key
+            $table->string('tipo', 20); //nombre del evento
         });
     }
 
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categoria');
+        Schema::dropIfExists('tipos');
     }
 };

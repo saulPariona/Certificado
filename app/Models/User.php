@@ -36,7 +36,7 @@ class User extends Authenticatable implements OAuthenticatable
      *
      * @var list<string>
      */
-    protected $hidden = [// el protected $hidden define los campos que no se muestran en el formulario
+    protected $hidden = [ // el protected $hidden define los campos que no se muestran en el formulario
         'password',
         'remember_token',
     ];
@@ -50,7 +50,7 @@ class User extends Authenticatable implements OAuthenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'password' => 'hashed', // el password es de tipo hashed es para que el password sea encriptado
         ];
     }
 }
