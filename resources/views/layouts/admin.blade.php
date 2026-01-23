@@ -12,6 +12,9 @@
     <header>
         <h1>Administracion de certificados</h1>
         <p>FIS-UNCP</p>
+        @auth
+            <a href="{{ route('logout') }}">Salir</a><!-- aqui se coloca el enlace para cerrar sesion, si esta autenticado-->
+        @endauth
     </header>
     <div>
         @yield('contenido')<!-- aqui se coloca el contenido que se va a mostrar el yield es para que se pueda mostrar el contenido de otra vista, es como un contenedor-->
