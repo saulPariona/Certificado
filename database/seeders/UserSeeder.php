@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 1; $i <= 500; $i++) {
+        for ($i = 1; $i <= 5000; $i++) {
             User::create([
 
                 'name' => 'name' . $i,

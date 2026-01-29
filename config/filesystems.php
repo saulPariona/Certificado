@@ -37,11 +37,18 @@ return [
             'throw' => false,
             'report' => false,
         ],
+        'certificados' => [
+            'driver' => 'local',
+            'root' => storage_path('app/private/certificados'),
+            'serve' => true,
+            'throw' => false,
+            'report' => false,
+        ],
 
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => rtrim(env('APP_URL'), '/').'/storage',
+            'url' => rtrim(env('APP_URL'), '/') . '/storage',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
