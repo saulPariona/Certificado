@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany; // relacion de muchos a muchos
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
 class Evento extends Model
 {
-    protected $table = "eventos"; // eñ protected $table define la tabla que se va a usar
+    protected $table = "eventos"; // el protected $table define la tabla que se va a usar
     protected $fillable = [
         'fecha',
         'name',
@@ -50,5 +51,9 @@ class Evento extends Model
         //evento_id es la llave foranea de la tabla eventos
         //user_id es la llave foranea de la tabla users 
         //wherePivot('tipo_id', 4) es para que solo muestre los organizadores que esten en control 4 (1=pre-Registro, 2=Asistente, 3=Ponente, 4=Organizador)
+    }
+    public function certificado(): HasMany
+    {
+        return $this->hasMany(Certificado::class, 'evento_id'); // el hasMany es una funcion que relaciona a muchos modelos
     }
 }
