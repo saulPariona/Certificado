@@ -83,5 +83,42 @@
                 <li>No hay ponentes</li>
             @endif
         </ul>
+        <h3 class="text-lg uppercase font-bold p-3 bg-gray-200 text-center">Asistentes</h3>
+        <div class="text-justify">
+            <a class="inline-block p-2 bg-blue-500 text-white border-2 rounded-sm border-blue-600 hover:bg-blue-600 m-2"
+                href="{{ route('generar-asistentes', ['evento_id' => $evento_id]) }}">Generar
+                Certificados</a>
+        </div>
+        <div class="text-justify">
+            <a class="inline-block p-2 bg-red-500 text-white border-2 rounded-sm border-red-600 hover:bg-red-600 m-2"
+                href="{{ route('desacertificar-asistentes', ['evento_id' => $evento_id]) }}">Desacertificar</a>
+        </div>
+
+
+        <ul class="flex flex-col items-stretch">
+            @foreach ($asistentes as $asistente)
+                <li class="p-3 flex flex-nowrap">
+                    <p class="text-md uppercase text-gray-900 grow">{{ $asistente->paternal_surname }} -
+                        {{ $asistente->maternal_surname }}
+                        -
+                        {{ $asistente->name }} - {{ $asistente->email }} - {{ $asistente->dni }}</p>
+                    @if ($asistente->pivot->certificado_creado)
+                        @foreach ($certificados as $certificado)
+                            @if ($certificado->tipo_id == 2 && $certificado->user_id == $asistente->id)
+                                <a href="{{ route('documento', ['certificado_id' => $certificado->id]) }}" target="_blank"
+                                    class="text-green-500 font-semibold p-2">Ver Certificado</a>
+                                @break
+                            @endif
+                        @endforeach
+                    @else
+                        <span class="text-amber-500 font-semibold p-2">Certificado No Creado</span>
+                    @endif
+                </li>
+            @endforeach
+            @if ($asistentes->isEmpty())
+                <!-- la funcion isEmpty() verifica si esta vacio y si esta vacio muestra el mensaje-->
+                <li>No hay asistentes</li>
+            @endif
+        </ul>
     </div>
 @endsection

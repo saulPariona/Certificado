@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TipoSeeder::class,
             EventoSeeder::class,
+            BouncerSeeder::class,
+            UsuarioExcelSeeder::class,
+
         ]);
     }
 }

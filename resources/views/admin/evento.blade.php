@@ -15,9 +15,12 @@
                 base</a>
         </div>
         <h3 class="text-lg uppercase font-bold p-3 bg-gray-200 text-center">Organizadores</h3>
-        <div class="text-justify">
+        <div class="flex items-center justify-between m-2">
             <a class="inline-block p-2 bg-blue-500 text-white border-2 rounded-sm border-blue-600 hover:bg-blue-600"
                 href="{{ route('add-organizador', ['evento_id' => $evento_id]) }}">Agregar</a>
+
+            <a class="inline-block p-2 bg-green-400 text-white border-2 rounded-sm border-green-600 hover:bg-green-600"
+                href="{{ route('exportar-organizadores', ['evento_id' => $evento_id]) }}">Exportar</a>
         </div>
         <ul class="flex flex-col items-stretch">
             @foreach ($organizadores as $organizador)
@@ -34,9 +37,12 @@
             @endif
         </ul>
         <h3 class="text-lg uppercase font-bold p-3 bg-gray-200 text-center">Ponentes</h3>
-        <div class="text-justify">
+        <div class="flex items-center justify-between m-2">
             <a class="inline-block p-2 bg-blue-500 text-white border-2 rounded-sm border-blue-600 hover:bg-blue-600"
                 href="{{ route('add-ponente', ['evento_id' => $evento_id]) }}">Agregar</a>
+
+            <a class="inline-block p-2 bg-green-400 text-white border-2 rounded-sm border-green-600 hover:bg-green-600"
+                href="{{ route('exportar-ponentes', ['evento_id' => $evento_id]) }}">Exportar</a>
         </div>
         <ul class="flex flex-col items-stretch">
             @foreach ($ponentes as $ponente)
@@ -53,9 +59,12 @@
             @endif
         </ul>
         <h3 class="text-lg uppercase font-bold p-3 bg-gray-200 text-center">Asistentes</h3>
-        <div class="text-justify">
+        <div class="flex items-center justify-between m-2">
             <a class="inline-block p-2 bg-blue-500 text-white border-2 rounded-sm border-blue-600 hover:bg-blue-600"
-                href="#">Agregar</a>
+                href="{{ route('add-asistente', ['evento_id' => $evento_id]) }}">Agregar</a>
+
+            <a class="inline-block p-2 bg-green-400 text-white border-2 rounded-sm border-green-600 hover:bg-green-600"
+                href="{{ route('exportar-asistentes', ['evento_id' => $evento_id]) }}">Exportar</a>
         </div>
         <ul class="flex flex-col items-stretch">
             @foreach ($asistentes as $asistente)
@@ -72,9 +81,12 @@
         </ul>
 
         <h3 class="text-lg uppercase font-bold p-3 bg-gray-200 text-center">Pre inscritos</h3>
-        <div class="text-justify">
+        <div class="flex items-center justify-between m-2">
             <a class="inline-block p-2 bg-blue-500 text-white border-2 rounded-sm border-blue-600 hover:bg-blue-600"
                 href="#">Agregar</a>
+
+            <a class="inline-block p-2 bg-green-400 text-white border-2 rounded-sm border-green-600 hover:bg-green-600"
+                href="#">Exportar</a>
         </div>
         <ul class="flex flex-col items-stretch">
             @foreach ($pre_registrados as $pre_registrado)

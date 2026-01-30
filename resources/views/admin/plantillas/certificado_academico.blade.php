@@ -72,6 +72,14 @@
         font-size: 24px;
         margin-bottom: 5px;
     }
+
+    .qr {
+        position: absolute;
+        bottom: 450px;
+        right: 0px;
+        width: 200px;
+        z-index: 50;
+    }
 </style>
 
 <body>
@@ -95,6 +103,10 @@
         <p class="p4">
             Huancayo, {{ $dia }} de {{ $meses[$fecha->month] }} del {{ $fecha->year }}
         </p>
+        <p class="p3    ">
+            Para la validacion ingresar a la url: <br> {{ $url_certificado }}
+        </p>
+        <img src="{{ $qr_code }}" class="qr">
     </div>
     <!-- la class siginifica los atributos que le voy a dar al elemento-->
 </body>
